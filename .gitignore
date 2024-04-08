@@ -1,0 +1,39 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Module directory
+.terraform/modules/
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Backup files
+*.bak
+
+# Ignored Terraform files
+**/.terraform/*
+
+# Exclude all .tfvars files, which might include sensitive data, such as
+# password, private keys, and other secrets. These should not be part of
+# version control as they are data points which are potentially sensitive.
+#
+# exception is terraform.tfvars which might have some non-sensitive values.
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
